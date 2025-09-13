@@ -453,7 +453,7 @@ init_(Module, ModSt0, Options, Parent, Reg) ->
 		    abort_init(Reason, Parent)
 	    catch
 		error:Error ->
-		    abort_init({Error, erlang:get_stacktrace()}, Parent)
+		    abort_init({Error, []}, Parent)
 	    end,
     AllNodes = ordsets:from_list([node()|nodes()]),
     Agent =

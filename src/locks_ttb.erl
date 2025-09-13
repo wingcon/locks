@@ -1,5 +1,6 @@
 -module(locks_ttb).
 
+-compile(nowarn_export_all).
 -compile(export_all).
 
 

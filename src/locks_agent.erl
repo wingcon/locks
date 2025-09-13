@@ -241,7 +241,7 @@ agent_init(Wait, Client, Options) ->
                     error_logger:error_report(
                       [{?MODULE, aborted},
                        {reason, Error},
-                       {trace, erlang:get_stacktrace()}]),
+                       {trace, []}]),
                     error(Error)
             end;
         Other ->
